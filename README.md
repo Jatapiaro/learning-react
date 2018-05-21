@@ -15,4 +15,8 @@ Do the following only if you don't have it already installed
     5. Make a `src` folder on the root of your project `mkdir src`
     6. Execute `babel input-file-path --out-file=output-file-path --presets=env,react --watch`
 
+### Check this when you have doubt about the event bindings.
+
+https://stackoverflow.com/questions/33846682/react-onclick-function-fires-on-render
+
 
