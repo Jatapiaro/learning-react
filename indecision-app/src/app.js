@@ -1,4 +1,5 @@
-import { isAdult, canDrink } from './utils';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp/IndecisionApp';
 
-console.log(isAdult(10) + " -> " + isAdult(20));
-console.log(canDrink(20) + " -> " + canDrink(23));
+ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
