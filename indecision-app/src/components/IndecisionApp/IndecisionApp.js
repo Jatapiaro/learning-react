@@ -4,6 +4,7 @@ import Action from './../Action/Action';
 import AddOption from './../AddOption/AddOption';
 import Header from './../Header/Header';
 import Options from './../Options/Options';
+import OptionModal from './../OptionModal/OptionModal';
 
 export default class IndecisionApp extends React.Component {
 
@@ -12,7 +13,8 @@ export default class IndecisionApp extends React.Component {
     }
 
     state = {
-        options: this.props.options
+        options: this.props.options,
+        selectedOption: undefined
     }
 
     componentDidMount() {
@@ -58,6 +60,10 @@ export default class IndecisionApp extends React.Component {
                 <br />
                 <AddOption handleAddOption={this.handleAddOption} />
                 <br />
+                <OptionModal 
+                    selectedOption = { this.state.selectedOption }
+                    handleUnpick = { this.handleUnpick }
+                />
             </div>
         );
     }
@@ -75,10 +81,23 @@ export default class IndecisionApp extends React.Component {
         let option = Math.random() * this.state.options.length;
         option = Math.floor(option);
         let o = this.state.options[option];
-        console.log("Do: " + o);
+        this.setState((prevState) => {
+            return {
+                selectedOption: o,
+            }
+        })
+    }
+
+    handleUnpick = () => {
+        this.setState((prevState) => {
+            return {
+                selectedOption: undefined,
+            }
+        });
     }
 
     handleAddOption = (option) => {
+    
         option = option.trim();
         if (!option) {
             return "Enter a valid value to add the item";

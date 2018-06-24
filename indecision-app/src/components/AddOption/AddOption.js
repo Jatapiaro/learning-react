@@ -12,6 +12,9 @@ export default class AddOption extends React.Component {
     }
 
     render() {
+        var buttonStyle = {
+            'z-index': 0
+        }
         return (
             <div>
                 {
@@ -21,7 +24,7 @@ export default class AddOption extends React.Component {
                     <div className="input-group mx-sm-3 mb-2">
                         <input name="option" type="text" className="form-control" placeholder="Insert Your Option" aria-label="Insert Your Option" aria-describedby="basic-addon2" />
                         <div className="input-group-append">
-                            <button className="btn btn-primary">Add Option</button>
+                            <button style={ buttonStyle } className="btn btn-primary">Add Option</button>
                         </div>
                     </div>
                 </form>
