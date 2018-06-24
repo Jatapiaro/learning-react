@@ -9,13 +9,10 @@ export default class IndecisionApp extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            options: this.props.options
-        }
-        this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-        this.handlePick = this.handlePick.bind(this);
-        this.handleAddOption = this.handleAddOption.bind(this);
-        this.handleDeleteOneOption = this.handleDeleteOneOption.bind(this);
+    }
+
+    state = {
+        options: this.props.options
     }
 
     componentDidMount() {
@@ -35,7 +32,6 @@ export default class IndecisionApp extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log("Updated", prevState);
         if (prevState.options.length != this.state.options) {
             localStorage.setItem('options', JSON.stringify(this.state.options));
         }
@@ -66,7 +62,7 @@ export default class IndecisionApp extends React.Component {
         );
     }
 
-    handleDeleteOptions() {
+    handleDeleteOptions = () => {
         this.setState((prevState) => {
             return {
                 options: []
@@ -75,14 +71,14 @@ export default class IndecisionApp extends React.Component {
         localStorage.setItem('options', JSON.stringify([]));
     }
 
-    handlePick() {
+    handlePick = () => {
         let option = Math.random() * this.state.options.length;
         option = Math.floor(option);
         let o = this.state.options[option];
         console.log("Do: " + o);
     }
 
-    handleAddOption(option) {
+    handleAddOption = (option) => {
         option = option.trim();
         if (!option) {
             return "Enter a valid value to add the item";
@@ -99,7 +95,7 @@ export default class IndecisionApp extends React.Component {
         });
     }
 
-    handleDeleteOneOption(index) {
+    handleDeleteOneOption = (index) => {
 
         this.setState((prevState) => {
             let arr = prevState.options;
@@ -108,7 +104,6 @@ export default class IndecisionApp extends React.Component {
                 options: arr
             }
         });
-        //console.log(option);
     }
 
 }

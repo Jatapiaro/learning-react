@@ -4,7 +4,6 @@ export default class Option extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handleDeleteOneOption = this.handleDeleteOneOption.bind(this);
     }
 
     componentWillUnmount() {
@@ -23,7 +22,7 @@ export default class Option extends React.Component {
         );
     }
 
-    handleDeleteOneOption() {
+    handleDeleteOneOption = () => {
         this.props.handleDeleteOneOption(this.props.index);
     }
 

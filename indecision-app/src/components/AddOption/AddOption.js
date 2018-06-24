@@ -3,12 +3,12 @@ import Error from './../Error/Error';
 
 export default class AddOption extends React.Component {
 
+    state = {
+        error: undefined
+    }
+
     constructor(props) {
         super(props);
-        this.addOption = this.addOption.bind(this);
-        this.state = {
-            error: undefined
-        }
     }
 
     render() {
@@ -29,7 +29,7 @@ export default class AddOption extends React.Component {
         );
     }
 
-    addOption(e) {
+    addOption = (e) => {
 
         e.preventDefault();
         let option = e.target.elements.option.value;
