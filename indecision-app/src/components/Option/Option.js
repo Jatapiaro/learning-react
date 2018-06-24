@@ -12,12 +12,9 @@ export default class Option extends React.Component {
 
     render() {
         return (
-            <div>
-                <br/>
-                <li>
-                    {this.props.option} &nbsp;
-                    <button className="btn btn-danger" onClick={this.handleDeleteOneOption}>x</button>
-                </li>
+            <div className="option">
+                <p className="option__text">{this.props.index + 1}. {this.props.option}</p>
+                <button className="button button--link" onClick={this.handleDeleteOneOption}>Remove</button>
             </div>
         );
     }

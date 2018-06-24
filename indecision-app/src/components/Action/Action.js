@@ -6,7 +6,7 @@ const Action = ((props) => {
             <button
                 onClick={props.handlePick}
                 disabled={!props.hasOptions}
-                className="btn btn-success">
+                className="big-button">
                 What should I do?
                 </button>
             <br />

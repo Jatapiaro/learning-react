@@ -7,11 +7,13 @@ const OptionModal = (props) => {
             isOpen = { !!props.selectedOption }
             onRequestClose={ props.handleUnpick }
             contentLabel = "Selected Option"
+            closeTimeoutMS = { 200 }
+            className = "modal"
         >
             { props.selectedOption &&
                 <p> { props.selectedOption } </p>
             }
-            <button onClick = { props.handleUnpick } > Okay </button>
+            <button className="button" onClick = { props.handleUnpick } > Okay </button>
         </Modal>
     )
 }
