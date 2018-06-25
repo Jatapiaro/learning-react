@@ -11,7 +11,7 @@ Do the following only if you don't have it already installed
     3. Execute `yarn init`
     4. Install React and ReactDOM `yarn add react react-dom`
     5. Instal Install babel dependencies `yarn add babel-cli babel-preset-react babel-preset-env babel-core babel-loader`
-    6. Install extra babel class property `babel-plugin-transform-class-properties`
+    6. Install extra babel class property `yarn add babel-plugin-transform-class-properties`
     7. Install webpack dependencies `yarn add webpack webpack-dev-server`
     8. Install scss loaders `yarn add style-loader css-loader sass-loader node-sass` 
     9. Extras: `yarn add normalize.css`
