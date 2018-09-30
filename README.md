@@ -19,6 +19,8 @@ Do the following only if you don't have it already installed
     11. Inside the folder create `touch app.js`
     12. On the root folder create `touch webpack.config.js`
     13. On the root folder create `touch .babelrc`
+    
+    14. Or simply `yarn add react react-dom babel-cli babel-preset-react babel-preset-env babel-core babel-loader babel-plugin-transform-class-properties webpack webpack-dev-server style-loader css-loader sass-loader node-sass normalize.css`
 
 ### Check this when you have doubt about the event bindings.
 
