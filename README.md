@@ -31,5 +31,7 @@ https://stackoverflow.com/questions/33846682/react-onclick-function-fires-on-ren
     1. `npm uninstall -g babel-cli`
     2. `npm uninstall -g live-server`
 
+# Remember this
+https://www.andreasreiterer.at/fix-browserrouter-on-apache/
 
 
